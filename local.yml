@@ -9,6 +9,6 @@
         update_cache=yes
         state=latest
   tasks:
-    - include: tasks/pakages.yml
+    - import: tasks/pakages.yml
 ...
 
