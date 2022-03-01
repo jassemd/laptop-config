@@ -1,12 +1,14 @@
 ---
 - hosts: localhost
   connection: local
-  become: true
- 
+  become: yes
+
+  pre_tasks:
+    - name: Update the OS Repo
+      yum:
+        update_cache=yes
+        state=latest
   tasks:
-  - name: install packages
-    package:
-      name: 
-        - htop
-        - tmux
+    - include: tasks/pakages.yml
+...
 

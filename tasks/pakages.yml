@@ -1,0 +1,6 @@
+ - name: Install Multi packages
+   package:
+     name: 
+       - htop
+       - tmux
+
